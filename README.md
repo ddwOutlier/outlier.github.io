@@ -1,2 +1,2 @@
-# outlier.github.io
-outlier web site
+# 안녕 나는 말하는 감자야
+이제 내가 웹 사이트를 열심히 만들어볼게!
