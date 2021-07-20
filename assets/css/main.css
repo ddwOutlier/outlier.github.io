@@ -1,4 +1,4 @@
-footer{
+header,footer{
     margin: 0;
     padding: 0;
     border: 0;
@@ -7,10 +7,96 @@ footer{
     font: inherit;
     vertical-align: baseline;
 }
-footer{
+header, footer{
     display: block;
 }.bg-dark{background-color:#212934!important}
 
 #footer .copyright {
     color: #9fa3a6;
 }
+
+#header .logo {
+    border-bottom: 0;
+    color: inherit;
+    font-family: "Roboto Slab", serif;
+    font-size: 1.125em; }
+#header .icons {
+    text-align: right; }
+
+/* Icons */
+#icons {
+    max-width : 100%;
+
+
+
+
+
+    
+    height : auto;
+    cursor: default;
+    list-style: none;
+    padding-left: 0;
+    display: inline-block;
+    padding: 0 1em 0 0;}
+    
+
+#template{
+    background:#efefef!important
+}#carousel-related-product .slick-slide:focus{
+    outline:0!important
+}#carousel-related-product .slick-dots li button:before{
+    font-size:15px;margin-top:20px
+}.brand-img{
+    filter:grayscale(100%);opacity:.5;transition:.5s
+}.brand-img:hover{
+    filter:grayscale(0);opacity:1
+}#template .carousel-indicators li{
+    margin-top:-50px;background-color:#59ab6e
+}#template .carousel-control-next i,#template .carousel-control-prev i{
+    color:#59ab6e!important;font-size:2.8em!important
+}.tempaltemo-carousel .h1{
+    font-size:.5em!important;color:#000!important
+}.services-icon-wap{
+    transition:.3s
+}.services-icon-wap:hover,.services-icon-wap:hover i{
+    color:#fff
+}.services-icon-wap:hover{
+    background:#69bb7e
+}.leaflet-control,.leaflet-control a{
+    font-size:10px!important
+}.form-control{
+    border:1px solid #e8e8e8}#tempaltemo_footer a{
+        color:#dcdde1
+    }#tempaltemo_footer a:hover{
+        color:#68bb7d
+    }#tempaltemo_footer ul.footer-link-list li{
+        padding-top:10px
+    }#tempaltemo_footer ul.footer-icons li{
+        width:2.6em;height:2.6em;line-height:2.6em
+    }#tempaltemo_footer ul.footer-icons li:hover{
+        background-color:#cfd6e1;transition:.5s
+    }#tempaltemo_footer ul.footer-icons li:hover i{
+        color:#212934;transition:.5s
+    }#tempaltemo_footer .border-light{
+        border-color:#2d343f!important
+    }.product-wap .h3,.product-wap i,.product-wap li,.product-wap p{
+        font-size:12px!important
+    }.product-wap .product-color-dot{
+        width:6px;height:6px}@media (min-width:576px){
+            .tempaltemo-carousel .h1{
+                font-size:1em!important}
+            }@media (min-width:768px){
+                #templatemo_main_nav .navbar-nav{
+                    max-width:450px
+                }
+            }@media (min-width:992px){
+                #templatemo_main_nav .navbar-nav{
+                    max-width:550px
+                }#template .carousel-item{
+                    min-height:30rem!important
+                }.product-wap .h3,.product-wap i,.product-wap li,.product-wap p{
+                    font-size:18px!important
+                }.product-wap .product-color-dot{
+                    width:12px;height:12px
+                }
+            }
