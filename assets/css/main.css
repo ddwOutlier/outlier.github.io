@@ -51,6 +51,11 @@
     overflow: hidden;
 }
 
+#source img{
+	width: 100%;
+	height: auto;
+}
+
 #footer {
 	background: #252525;
 	margin: 0;
