@@ -51,6 +51,11 @@
     overflow: hidden;
 }
 
+#source img{
+	width: 100%;
+	height: auto;
+}
+
 #footer {
 	background: #252525;
 	margin: 0;
@@ -85,11 +90,4 @@
 	padding: 0;
 	width: 44px;
 }
-#footer div ul li img {
-	display: block;
-	height: 44px;
-	margin: 0;
-	padding: 0;
-	text-indent: -99999px;
-	width: 44px;
-}
+  
