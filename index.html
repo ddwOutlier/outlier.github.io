@@ -7,6 +7,10 @@
         <link rel="shortcut icon" href="assets/img/gamja.jpg">
         <!-- css -->
         <link rel="stylesheet" href="assets/css/main.css">
+        <link rel="stylesheet" href="assets/css/first.css">
+        <link rel="stylesheet" href="assets/css/demo.css" />
+		<link rel="stylesheet" href="assets/css/slicebox.css" />
+		<link rel="stylesheet" href="assets/css/custom.css" />
     </head>
     <body>
         <div id = header>
@@ -28,10 +32,104 @@
                 </li>
             </ul>
         </div>
-        <P>감자는 식물 가짓과의 여러해살이풀. 높이는 60~100cm이며, 잎은 겹잎이고 어긋난다.<br>
-             초여름에 흰색 또는 자주색의 통꽃이 줄기 끝에 핀다. <br>
-             비교적 찬 기후에서 잘 자라고 성장 기간이 짧다. <br>
-             남아메리카 칠레가 원산지로 온대, 한대에서 널리 재배된다.</P>
+        <ul class="Menu">
+            <ul class="Menu-list">
+              <li class="Menu-list-item" onclick>
+                  <a href="home.html">
+                    Home
+                    <span class="Mask"><span>Home</span></span>
+                    <span class="Mask"><span>Home</span></span>
+                </a></li>
+              <li class="Menu-list-item">
+                <a href="member.html" onclick>
+                    member
+                    <span class="Mask"><span>member</span></span>
+                    <span class="Mask"><span>member</span></span>  
+                </a>
+                </li>
+              <li class="Menu-list-item" onclick>
+                  <a href="resourcebook.html">
+                    resource book
+                    <span class="Mask"><span>resource book</span></span>
+                    <span class="Mask"><span>resource book</span></span>
+                </a>
+                </li>
+
+              <li class="Menu-list-item" onclick>
+                <a href="info.html">
+                    about
+                <span class="Mask"><span>about</span></span>
+                <span class="Mask"><span>about</span></span>
+                </a>
+              </li>
+
+            </ul>
+        </ul>
+        <div class="wrapper">
+
+            <ul id="sb-slider" class="sb-slider">
+                <li>
+                    <a href="http://www.flickr.com/photos/strupler/2969141180" target="_blank"><img src="assets/img/7.jpg" alt="image1"/></a>
+                    <div class="sb-description">
+                        <h3>Creative Lifesaver</h3>
+                    </div>
+                </li>
+                <li>
+                    <a href="http://www.flickr.com/photos/strupler/2968268187" target="_blank"><img src="assets/img/7.jpg" alt="image2"/></a>
+                    <div class="sb-description">
+                        <h3>Honest Entertainer</h3>
+                    </div>
+                </li>
+                <li>
+                    <a href="http://www.flickr.com/photos/strupler/2968114825" target="_blank"><img src="assets/img/7.jpg" alt="image1"/></a>
+                    <div class="sb-description">
+                        <h3>Brave Astronaut</h3>
+                    </div>
+                </li>
+                <li>
+                    <a href="http://www.flickr.com/photos/strupler/2968122059" target="_blank"><img src="assets/img/7.jpg" alt="image1"/></a>
+                    <div class="sb-description">
+                        <h3>Affectionate Decision Maker</h3>
+                    </div>
+                </li>
+                <li>
+                    <a href="http://www.flickr.com/photos/strupler/2969119944" target="_blank"><img src="assets/img/7.jpg" alt="image1"/></a>
+                    <div class="sb-description">
+                        <h3>Faithful Investor</h3>
+                    </div>
+                </li>
+                <li>
+                    <a href="http://www.flickr.com/photos/strupler/2968126177" target="_blank"><img src="assets/img/7.jpg" alt="image1"/></a>
+                    <div class="sb-description">
+                        <h3>Groundbreaking Artist</h3>
+                    </div>
+                </li>
+                <li>
+                    <a href="http://www.flickr.com/photos/strupler/2968945158" target="_blank"><img src="images/7.jpg" alt="image1"/></a>
+                    <div class="sb-description">
+                        <h3>Selfless Philantropist</h3>
+                    </div>
+                </li>
+            </ul>
+
+            <div id="shadow" class="shadow"></div>
+
+            <div id="nav-arrows" class="nav-arrows">
+                <a href="#">Next</a>
+                <a href="#">Previous</a>
+            </div>
+
+            <div id="nav-dots" class="nav-dots">
+                <span class="nav-dot-current"></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+        </div><!-- /wrapper -->
         <!-- footer 시작 -->
         <div id="footer">
             <div>
@@ -46,5 +144,87 @@
                 </ul>
             </div>
         </div>
+            <!-- Start Script -->
+    <script src="assets/js/first.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/js/slicebox.js"></script>
+    <script type="text/javascript">
+        $(function() {
+
+            var Page = (function() {
+
+                var $navArrows = $( '#nav-arrows' ).hide(),
+                    $navDots = $( '#nav-dots' ).hide(),
+                    $nav = $navDots.children( 'span' ),
+                    $shadow = $( '#shadow' ).hide(),
+                    slicebox = $( '#sb-slider' ).slicebox( {
+                        onReady : function() {
+
+                            $navArrows.show();
+                            $navDots.show();
+                            $shadow.show();
+
+                        },
+                        onBeforeChange : function( pos ) {
+
+                            $nav.removeClass( 'nav-dot-current' );
+                            $nav.eq( pos ).addClass( 'nav-dot-current' );
+
+                        }
+                    } ),
+                    
+                    init = function() {
+
+                        initEvents();
+                        
+                    },
+                    initEvents = function() {
+
+                        // add navigation events
+                        $navArrows.children( ':first' ).on( 'click', function() {
+
+                            slicebox.next();
+                            return false;
+
+                        } );
+
+                        $navArrows.children( ':last' ).on( 'click', function() {
+                            
+                            slicebox.previous();
+                            return false;
+
+                        } );
+
+                        $nav.each( function( i ) {
+                        
+                            $( this ).on( 'click', function( event ) {
+                                
+                                var $dot = $( this );
+                                
+                                if( !slicebox.isActive() ) {
+
+                                    $nav.removeClass( 'nav-dot-current' );
+                                    $dot.addClass( 'nav-dot-current' );
+                                
+                                }
+                                
+                                slicebox.jump( i + 1 );
+                                return false;
+                            
+                            } );
+                            
+                        } );
+
+                    };
+
+                    return { init : init };
+
+            })();
+
+            Page.init();
+
+        });
+    </script>
+    <!-- End Script -->
     </body>
 </html>
